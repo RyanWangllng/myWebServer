@@ -68,9 +68,9 @@ int main(int argc, char* argv[]) {
     http_conn::m_epollfd = epollfd;
 
     while (1) {
-        std::cout << "come in..." << std::endl;
+        // std::cout << "come in..." << std::endl;
         int num = epoll_wait(epollfd, events, MAX_EVENT_NUM, -1);
-        std::cout << "num: " << num << std::endl;
+        // std::cout << "num: " << num << std::endl;
         if ((num < 0) && (errno != EINTR)) {
             std::cout << "epoll failure" << std::endl;
             break;
